@@ -2,6 +2,9 @@
 #include<fstream>       //for file handling
 #include<windows.h>     //we use "Sleep() function from this header file"
 #include<sstream>       //to perform string operation
+#include<bits/stdc++.h>
+
+using namespace std;
 
 class Hostel
 {
@@ -118,6 +121,7 @@ int main()
     Student s;
 
     bool exit = false;
+    string name, rollNo, address;
 
     while(!exit)
     {
@@ -136,19 +140,19 @@ int main()
 
             system("cls");
 
-            cout<<"\tEnter Name of Student: "<<endl;
+            cout<<"\tEnter Name of Student: ";
             cin>>name;
             s.setName(name);
 
-            cout<<"\tEnter Roll Number of Student: "<<endl;
+            cout<<"\tEnter Roll Number of Student: ";
             cin>>rollNo;
             s.setRollNo(rollNo);
 
-            cout<<"\tEnter Address of Student: "<<endl;
+            cout<<"\tEnter Address of Student: ";
             cin>>address;
             s.setAddress(address);
 
-            if(h.getBed>0)
+            if(h.getBed()>0)
             {
                 h.reserve();
             }else{
